@@ -1,0 +1,32 @@
+<app-chart> </app-chart>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-12">
+      <input class="col-6 clx" #input type="text" [(ngModel)]="name" />
+      <button class="btn btn-success" (click)="click()">SEARCH</button>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <table border="1" class="table">
+      <tr>
+        <th>Username</th>
+        <th>Node ID</th>
+        <th>ID</th>
+        <th>Avatar</th>
+
+      </tr>
+      <tr *ngFor="let item of this.githubService.items">
+        <td>{{item.login}}</td>
+        <td>{{item.node_id}}</td>
+        <td>{{item.id}}</td>
+        <td>{{item.avatar_url}}</td>
+      </tr>
+    </table>
+
+  </div>
+  
+</div>
