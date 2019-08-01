@@ -21,7 +21,7 @@ export class GithubService {
   }
 
   getUser(searchText) {
-    const url = "http://api.github.com/search/users?q=" + searchText;
+    const url = "https://api.github.com/search/users?q=" + searchText;
     this.http.get(url).subscribe(
       res => {
         const data = res.json();
